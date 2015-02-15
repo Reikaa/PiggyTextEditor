@@ -7,5 +7,5 @@ public interface Operations {
 	public void saveFile(JTextArea area,String fileName);
 	public void readInFile(JTextArea area,String fileName);
 	public void saveFileAs(JTextArea area,JFileChooser dialog);
-	public void saveOld(JTextArea area, String filename, boolean changed);
+	public void saveOld(JTextArea area, String filename);
 }

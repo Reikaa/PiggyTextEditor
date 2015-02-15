@@ -48,9 +48,9 @@ public class MainBoard extends JFrame{
 		
 		JButton cut = tool.add(Cut), cop = tool.add(Copy),pas = tool.add(Paste);
 		
-		cut.setText(null); cut.setIcon(new ImageIcon("/Users/jiaqichen/Documents/workspace/TextEditor/image/cut.gif"));
-		cop.setText(null); cop.setIcon(new ImageIcon("/Users/jiaqichen/Documents/workspace/TextEditor/image/copy.gif"));
-		pas.setText(null); pas.setIcon(new ImageIcon("/Users/jiaqichen/Documents/workspace/TextEditor/image/paste.gif"));
+		cut.setText(null); cut.setIcon(new ImageIcon(System.getProperty("user.dir")+"/image/cut.gif"));
+		cop.setText(null); cop.setIcon(new ImageIcon(System.getProperty("user.dir")+"/image/copy.gif"));
+		pas.setText(null); pas.setIcon(new ImageIcon(System.getProperty("user.dir")+"/image/paste.gif"));
 		
 		Save.setEnabled(false);
 		SaveAs.setEnabled(false);
@@ -64,8 +64,8 @@ public class MainBoard extends JFrame{
 	
 	Action Open = new AbstractAction("Open", new ImageIcon("/Users/jiaqichen/Documents/workspace/TextEditor/image/open.gif")) {
 		public void actionPerformed(ActionEvent e) {
-			controller.saveOld(area,currentFile,changed);
 			if(changed){
+			controller.saveOld(area, dialog.getSelectedFile().getAbsolutePath());
 			currentFile = dialog.getSelectedFile().getAbsolutePath();
 			setTitle(currentFile);
 			changed = false;
@@ -108,13 +108,13 @@ public class MainBoard extends JFrame{
 	
 	Action Quit = new AbstractAction("Quit") {
 		public void actionPerformed(ActionEvent e) {
-			controller.saveOld(area,currentFile,changed);
-			if(changed){
+			if(changed) {
+			controller.saveOld(area,currentFile);
 			currentFile = dialog.getSelectedFile().getAbsolutePath();
 			setTitle(currentFile);
 			changed = false;
 			Save.setEnabled(false);
-			}
+		}
 			System.exit(0);
 		}
 	};

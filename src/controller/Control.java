@@ -33,9 +33,8 @@ public class Control implements Operations{
 			JOptionPane.showMessageDialog(area,"Editor can't find the file called "+fileName);
 		}
 	}
-	public void saveOld(JTextArea area,String fileName, boolean changed){
-		if(changed) {
-			if(JOptionPane.showConfirmDialog(area, "Would you like to save "+ fileName +" ?","Save",JOptionPane.YES_NO_OPTION)== JOptionPane.YES_OPTION)
+	public void saveOld(JTextArea area,String fileName){
+		if(JOptionPane.showConfirmDialog(area, "Would you like to save "+ fileName +" ?","Save",JOptionPane.YES_NO_OPTION)== JOptionPane.YES_OPTION){
 				this.saveFile(area,fileName);
 		}
 	}
