@@ -62,7 +62,7 @@ public class MainBoard extends JFrame{
 		setVisible(true);
 	}
 	
-	Action Open = new AbstractAction("Open", new ImageIcon("/Users/jiaqichen/Documents/workspace/TextEditor/image/open.gif")) {
+	Action Open = new AbstractAction("Open", new ImageIcon(System.getProperty("user.dir")+"/image/open.gif")) {
 		public void actionPerformed(ActionEvent e) {
 			if(changed){
 			controller.saveOld(area, dialog.getSelectedFile().getAbsolutePath());
@@ -81,7 +81,7 @@ public class MainBoard extends JFrame{
 		}
 	};
 	
-	Action Save = new AbstractAction("Save", new ImageIcon("/Users/jiaqichen/Documents/workspace/TextEditor/image/save.gif")) {
+	Action Save = new AbstractAction("Save", new ImageIcon(System.getProperty("user.dir")+"/image/save.gif")) {
 		public void actionPerformed(ActionEvent e) {
 			if(!currentFile.equals("Untitled")){
 				controller.saveFile(area,currentFile);
@@ -123,25 +123,4 @@ public class MainBoard extends JFrame{
 	Action Cut = m.get(DefaultEditorKit.cutAction);
 	Action Copy = m.get(DefaultEditorKit.copyAction);
 	Action Paste = m.get(DefaultEditorKit.pasteAction);
-	
-//	private void saveFileAs() {
-//		if(dialog.showSaveDialog(null)==JFileChooser.APPROVE_OPTION){
-//			controller.saveFile(area,dialog.getSelectedFile().getAbsolutePath());
-//			currentFile = dialog.getSelectedFile().getAbsolutePath();
-//			setTitle(currentFile);
-//			changed = false;
-//			Save.setEnabled(false);
-//		}
-//	}
-	
-//	private void saveOld() {
-//		if(changed) {
-//			if(JOptionPane.showConfirmDialog(this, "Would you like to save "+ currentFile +" ?","Save",JOptionPane.YES_NO_OPTION)== JOptionPane.YES_OPTION)
-//				controller.saveFile(area,currentFile);
-//			currentFile = dialog.getSelectedFile().getAbsolutePath();
-//			setTitle(currentFile);
-//			changed = false;
-//			Save.setEnabled(false);
-//		}
-//	}
 }
