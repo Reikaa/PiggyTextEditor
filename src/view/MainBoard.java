@@ -133,7 +133,15 @@ public class MainBoard extends JFrame{
 		setVisible(true);
 	}
 	
+<<<<<<< HEAD
+<<<<<<< HEAD
 	Action Open = new AbstractAction("Open", iOpen) {
+=======
+	Action Open = new AbstractAction("Open", new ImageIcon(System.getProperty("user.dir")+"/image/open.gif")) {
+>>>>>>> FETCH_HEAD
+=======
+	Action Open = new AbstractAction("Open", new ImageIcon(System.getProperty("user.dir")+"/image/open.gif")) {
+>>>>>>> FETCH_HEAD
 		public void actionPerformed(ActionEvent e) {
 			if(changed){
 			controller.saveOld(area, dialog.getSelectedFile().getAbsolutePath());
@@ -152,7 +160,15 @@ public class MainBoard extends JFrame{
 		}
 	};
 	
+<<<<<<< HEAD
+<<<<<<< HEAD
 	Action Save = new AbstractAction("Save", new ImageIcon(getClass().getResource("/image/save.gif"))) {
+=======
+	Action Save = new AbstractAction("Save", new ImageIcon(System.getProperty("user.dir")+"/image/save.gif")) {
+>>>>>>> FETCH_HEAD
+=======
+	Action Save = new AbstractAction("Save", new ImageIcon(System.getProperty("user.dir")+"/image/save.gif")) {
+>>>>>>> FETCH_HEAD
 		public void actionPerformed(ActionEvent e) {
 			if(!currentFile.equals("Untitled")){
 				controller.saveFile(area,currentFile);
@@ -194,6 +210,8 @@ public class MainBoard extends JFrame{
 	Action Cut = m.get(DefaultEditorKit.cutAction);
 	Action Copy = m.get(DefaultEditorKit.copyAction);
 	Action Paste = m.get(DefaultEditorKit.pasteAction);
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -225,4 +243,8 @@ public class MainBoard extends JFrame{
 //			Save.setEnabled(false);
 //		}
 //	}
+=======
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
 }
