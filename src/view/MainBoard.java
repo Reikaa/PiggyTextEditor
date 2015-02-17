@@ -135,7 +135,11 @@ public class MainBoard extends JFrame{
 	
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Action Open = new AbstractAction("Open", iOpen) {
+=======
+	Action Open = new AbstractAction("Open", new ImageIcon(System.getProperty("user.dir")+"/image/open.gif")) {
+>>>>>>> FETCH_HEAD
 =======
 	Action Open = new AbstractAction("Open", new ImageIcon(System.getProperty("user.dir")+"/image/open.gif")) {
 >>>>>>> FETCH_HEAD
@@ -162,7 +166,11 @@ public class MainBoard extends JFrame{
 	
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Action Save = new AbstractAction("Save", new ImageIcon(getClass().getResource("/image/save.gif"))) {
+=======
+	Action Save = new AbstractAction("Save", new ImageIcon(System.getProperty("user.dir")+"/image/save.gif")) {
+>>>>>>> FETCH_HEAD
 =======
 	Action Save = new AbstractAction("Save", new ImageIcon(System.getProperty("user.dir")+"/image/save.gif")) {
 >>>>>>> FETCH_HEAD
@@ -212,6 +220,7 @@ public class MainBoard extends JFrame{
 	Action Paste = m.get(DefaultEditorKit.pasteAction);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -243,6 +252,8 @@ public class MainBoard extends JFrame{
 //			Save.setEnabled(false);
 //		}
 //	}
+=======
+>>>>>>> FETCH_HEAD
 =======
 >>>>>>> FETCH_HEAD
 =======
